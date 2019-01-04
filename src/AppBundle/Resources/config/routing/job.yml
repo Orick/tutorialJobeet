@@ -24,7 +24,7 @@ job_delete:
     methods:  DELETE
 
 job_preview:
-    path:     /{company}/{location}/{token}/{position}
+    path:     /{company}/{location}/{token}/{position}/preview
     defaults: { _controller: "AppBundle:Job:preview" }
     methods:  GET
     

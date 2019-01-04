@@ -9,7 +9,7 @@ namespace AppBundle\Repository;
  * repository methods below.
  */
 class JobRepository extends \Doctrine\ORM\EntityRepository
-{
+{   
     public function getActiveJobs($category_id = null, $max = null, $offset = null)
     {
         $qb = $this->createQueryBuilder('j')

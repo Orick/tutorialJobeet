@@ -194,6 +194,15 @@ class JobController extends Controller
             'position' => $job->getPositionSlug()));
     }
 
+
+
+    /**
+     * Creates a form to publish a job entity.
+     *
+     * @param Job $job The job entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createPublishForm(Job $job)
     {
         return $this->createFormBuilder(array('token' => $job->getToken()))

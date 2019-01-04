@@ -10,7 +10,6 @@ category_show:
         page: 1
     methods:  GET
     
-
 category_new:
     path:     /new
     defaults: { _controller: "AppBundle:Category:new" }
