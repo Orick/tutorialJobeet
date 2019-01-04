@@ -1,0 +1,27 @@
+category_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Category:index" }
+    methods:  GET
+
+category_show:
+    path:     /{slug}/{page}/show
+    defaults: 
+        _controller: "AppBundle:Category:show" 
+        page: 1
+    methods:  GET
+    
+
+category_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Category:new" }
+    methods:  [GET, POST]
+
+category_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Category:edit" }
+    methods:  [GET, POST]
+
+category_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Category:delete" }
+    methods:  DELETE

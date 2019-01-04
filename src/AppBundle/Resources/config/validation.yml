@@ -1,0 +1,41 @@
+AppBundle\Entity\Category:
+    properties:
+        name:
+            - NotBlank: ~
+
+
+
+AppBundle\Entity\Job:
+    properties:
+        category:
+            - NotBlank: ~
+        type:
+            - NotBlank: ~
+            - Choice: { callback: getTypeValues }
+        company:
+            - NotBlank: ~
+        logo:
+            - Image: ~
+        position:
+            - NotBlank: ~
+        location:
+            - NotBlank: ~
+        description:
+            - NotBlank: ~
+        howToApply:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: ~
+
+AppBundle\Entity\Affiliate:
+    properties:
+        url:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: ~
+        token:
+            - NotBlank: ~
+        createdAt:
+            - NotBlank: ~

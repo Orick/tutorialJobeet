@@ -1,0 +1,34 @@
+job_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Job:index" }
+    methods:  GET
+
+job_show:
+    path:     /{company}/{location}/{id}/{position}/show
+    defaults: { _controller: "AppBundle:Job:show" }
+    methods:  GET
+
+job_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Job:new" }
+    methods:  [GET, POST]
+
+job_edit:
+    path:     /{token}/edit
+    defaults: { _controller: "AppBundle:Job:edit" }
+    methods:  [GET, POST]
+
+job_delete:
+    path:     /{token}/delete
+    defaults: { _controller: "AppBundle:Job:delete" }
+    methods:  DELETE
+
+job_preview:
+    path:     /{company}/{location}/{token}/{position}
+    defaults: { _controller: "AppBundle:Job:preview" }
+    methods:  GET
+    
+job_publish:
+    path:     /{token}/publish
+    defaults: { _controller: "AppBundle:Job:publish" }
+    methods:  POST

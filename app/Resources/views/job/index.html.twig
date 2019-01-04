@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+ 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/jobs.css') }}" type="text/css" media="all" />
+{% endblock %}
+{% block body %}
+    <div id="jobs">
+        {% for category in categories %}
+            <div class="category_{{ category.slug }}">
+            <div>
+                <div class="category">
+                    <div class="feed">
+                        <a href="">Feed</a>
+                    </div>
+                    <h1><a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.name }}</a></h1>
+                </div>
+
+                {{ include('job/list.html.twig', {'jobs':category.ActiveJobs}) }}
+
+                {% if category.moreJobs %}
+                    <div class="more_jobs">
+                        and <a href="{{ path('category_show', {  'slug': category.slug }) }}">{{ category.moreJobs }}</a> more...
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

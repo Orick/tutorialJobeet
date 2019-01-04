@@ -1,0 +1,11 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    prefix: /appbunfle
+    
+app_job:
+    resource: "@AppBundle/Resources/config/routing/job.yml"
+    
+app_category:
+    resource: "@AppBundle/Resources/config/routing/category.yml"
+    prefix:   /category
